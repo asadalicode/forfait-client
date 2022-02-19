@@ -1,0 +1,30 @@
+<!-- Angular Flex colonne/commence de la gauche / 5px de gap entre chaque cards --->
+<div class="container" div fxLayout="column" fxLayoutAlign="flex-start" fxLayoutGap="5px">
+  <!-- Boucle  --->
+  <mat-card *ngFor="let forfait of forfaits" class="example-card">
+    <mat-card-header>
+      <!--  Nom de l'hotel  --->
+      <mat-card-title>{{ forfait.hotel.nom }}</mat-card-title>
+      <!-- Viles départ / destination  --->
+      <mat-card-subtitle>de {{ forfait.villeDeDepart }} à {{ forfait.destination }}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <!-- Dates  --->
+      <mat-card-subtitle>{{ forfait.dateDepart }} au {{ forfait.dateRetour }}</mat-card-subtitle>
+      <!-- nombres de chambres  --->
+      <p>{{ forfait.hotel.nbChambres }} chambres</p>
+      <!-- Prix  --->
+      <p>Prix: {{ forfait.prix }}$</p>
+      <!-- Photo  --->
+      <img mat-card-image src="{{ forfait.hotel.photohotel }}" alt="Photo hotel" />
+      <!-- Caractérisques hotel  --->
+      <p class="bold">Caractéristiques:</p>
+      <p>{{ forfait.hotel.caracters }}</p>
+      <!-- Component étoiles --->
+      <app-star></app-star>
+    </mat-card-content>
+    <!-- Button réservation --->
+    <button mat-raised-button>Réservation</button>
+  </mat-card>
+  <!-- Fin de la boucle --->
+</div>

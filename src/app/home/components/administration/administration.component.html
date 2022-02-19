@@ -1,0 +1,25 @@
+<div class="mt-3" fxLayout="column" fxLayoutAlign="flex-start" fxLayoutGap="7px">
+  <div>
+    <button (click)="addForfait()" mat-button type="submit" class="btn-filled">+ Ajouter un forfait</button>
+  </div>
+  <div [style.visibility]="!isLoading ? 'visible' : 'hidden'" class="w-100">
+    <div style="display: grid">
+      <div class="">
+        <app-datatable
+          [tableData]="tableData"
+          [tableColumns]="tableColumns"
+          [isFilterable]="true"
+          [isPageable]="true"
+          [isDeleteIcon]="true"
+          (rowEditAction)="editForfait($event)"
+          (rowDeleteAction)="deleteForfait($event)"
+          [isEditIcon]="true"
+          [paginationSizes]="[5, 10, 15]"
+          [defaultPageSize]="5"
+          [rowActionIcon]="'remove_shopping_cart'"
+        >
+        </app-datatable>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+<div class="modal-content settings container-fluid">
+  <div class="modal-header">
+    <!-- <h4 class="mb-0 payout-head">Add FAQs</h4> -->
+    <!-- <label class="mb-0">Delete</label> -->
+
+    <button type="button" (click)="close()" class="close" aria-label="Close">
+      <span aria-hidden="true">
+        <mat-icon style="width: '15px'">close</mat-icon>
+      </span>
+    </button>
+  </div>
+  <div class="modal-body pb-4 pt-1">
+    <form>
+      <div class="text-center">
+        <p>Do you want to delete this record?</p>
+      </div>
+      <mat-dialog-actions class="pt-3" fxLayout="row" fxLayoutAlign="center center">
+        <button (click)="lookUpComponent()" [disabled]="isLoading" mat-button type=" submit" class="btn-filled">
+          Yes
+        </button>
+        <button mat-button type="button" cdkFocusInitial class="btn-filled" mat-dialog-close>No</button>
+      </mat-dialog-actions>
+    </form>
+  </div>
+</div>

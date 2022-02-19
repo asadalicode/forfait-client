@@ -1,0 +1,180 @@
+<div class="modal-content container-fluid">
+  <div class="modal-header">
+    <!-- <h4 class="mb-0 payout-head">Add FAQs</h4> -->
+    <label class="mb-0">Forfait</label>
+
+    <button type="button" (click)="close()" class="close" aria-label="Close">
+      <span aria-hidden="true">
+        <mat-icon style="width: '15px'">close</mat-icon>
+      </span>
+    </button>
+  </div>
+  <div class="modal-body pb-4 pt-1">
+    <div>
+      <form class="w-100" (ngSubmit)="lookUpComponent()" [formGroup]="Form" #f novalidate>
+        <div class="pt-4">
+          <div class="d-flex row wrap" fxLayoutGap="15px">
+            <div fxFlex="30">
+              <label>Destination</label>
+              <mat-form-field appearance="outline" class="w-100">
+                <input matInput placeholder="Enter user name" formControlName="name" />
+                <mat-error *ngIf="hasError('name', 'required')">
+                  <span>Username is required</span>
+                </mat-error>
+              </mat-form-field>
+            </div>
+
+            <div fxFlex="30">
+              <label>Ville de depart</label>
+              <mat-form-field appearance="outline" class="w-100">
+                <input matInput placeholder="Enter user name" formControlName="name" />
+                <mat-error *ngIf="hasError('name', 'required')">
+                  <span>Username is required</span>
+                </mat-error>
+              </mat-form-field>
+            </div>
+
+            <div fxFlex="30">
+              <label>Date de depart</label>
+              <mat-form-field appearance="outline" class="w-100">
+                <input
+                  matInput
+                  placeholder="Enter..."
+                  (click)="picker.open()"
+                  [matDatepicker]="picker"
+                  formControlName="member_since"
+                />
+                <mat-datepicker #picker></mat-datepicker>
+                <mat-error *ngIf="hasError('member_since', 'required')">
+                  <span>Date is required and must be valid</span>
+                </mat-error>
+              </mat-form-field>
+            </div>
+
+            <div fxFlex="30">
+              <label>Date de retour</label>
+              <mat-form-field appearance="outline" class="w-100">
+                <input
+                  matInput
+                  placeholder="Enter..."
+                  (click)="picker.open()"
+                  [matDatepicker]="picker"
+                  formControlName="member_since"
+                />
+                <mat-datepicker #picker></mat-datepicker>
+                <mat-error *ngIf="hasError('member_since', 'required')">
+                  <span>Date is required and must be valid</span>
+                </mat-error>
+              </mat-form-field>
+            </div>
+
+            <div fxFlex="30">
+              <label>Prix</label>
+              <mat-form-field appearance="outline" class="w-100">
+                <input
+                  matInput
+                  placeholder="Enter..."
+                  (click)="picker.open()"
+                  [matDatepicker]="picker"
+                  formControlName="member_since"
+                />
+                <mat-datepicker #picker></mat-datepicker>
+                <mat-error *ngIf="hasError('member_since', 'required')">
+                  <span>Date is required and must be valid</span>
+                </mat-error>
+              </mat-form-field>
+            </div>
+
+            <div fxFlex="30">
+              <label>Rabails</label>
+              <mat-form-field appearance="outline" class="w-100">
+                <input matInput placeholder="Enter user name" formControlName="name" />
+                <mat-error *ngIf="hasError('name', 'required')">
+                  <span>Username is required</span>
+                </mat-error>
+              </mat-form-field>
+            </div>
+
+            <div fxFlex="30">
+              <label>Forfait Vedette</label>
+              <mat-form-field appearance="outline" class="w-100">
+                <mat-select formControlName="status" placeholder="-Select-">
+                  <mat-option value="active">Active</mat-option>
+                  <mat-option value="inactive">InActive</mat-option>
+                </mat-select>
+                <mat-error *ngIf="hasError('name', 'required')">
+                  <span>Username is required</span>
+                </mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+
+          <div class="d-flex row wrap py-3">
+            <h5>Hotel</h5>
+          </div>
+
+          <div class="d-flex row wrap" fxLayoutGap="15px">
+            <div fxFlex="30">
+              <label>Nom Hotel</label>
+              <mat-form-field appearance="outline" class="w-100">
+                <input matInput placeholder="Enter user name" formControlName="name" />
+                <mat-error *ngIf="hasError('name', 'required')">
+                  <span>Username is required</span>
+                </mat-error>
+              </mat-form-field>
+            </div>
+
+            <div fxFlex="30">
+              <label>Coordonnees de l'hotel</label>
+              <mat-form-field appearance="outline" class="w-100">
+                <input matInput placeholder="Enter user name" formControlName="name" />
+                <mat-error *ngIf="hasError('name', 'required')">
+                  <span>Username is required</span>
+                </mat-error>
+              </mat-form-field>
+            </div>
+
+            <div fxFlex="30">
+              <label>Nombre(s) etoile(s)</label>
+              <mat-form-field appearance="outline" class="w-100">
+                <input matInput placeholder="Enter user name" formControlName="name" />
+                <mat-error *ngIf="hasError('name', 'required')">
+                  <span>Username is required</span>
+                </mat-error>
+              </mat-form-field>
+            </div>
+
+            <div fxFlex="30">
+              <label>Nombre de Chambers</label>
+              <mat-form-field appearance="outline" class="w-100">
+                <input matInput placeholder="Enter user name" formControlName="name" />
+                <mat-error *ngIf="hasError('name', 'required')">
+                  <span>Username is required</span>
+                </mat-error>
+              </mat-form-field>
+            </div>
+
+            <div fxFlex="30">
+              <label>Characteristiqeus</label>
+              <mat-form-field appearance="outline" class="w-100">
+                <mat-select formControlName="status" placeholder="-Select-">
+                  <mat-option value="active">Active</mat-option>
+                  <mat-option value="inactive">InActive</mat-option>
+                </mat-select>
+                <mat-error *ngIf="hasError('name', 'required')">
+                  <span>Username is required</span>
+                </mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+        </div>
+        <mat-dialog-actions class="d-flex justify-content-center pt-3">
+          <!-- <button mat-button type="button" mat-dialog-close>Close</button> -->
+          <button mat-button type="submit" class="btn-filled" cdkFocusInitial [disabled]="Form.invalid || isLoading">
+            Update
+          </button>
+        </mat-dialog-actions>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,77 @@
+.mat-card {
+  max-width: 275px;
+  border-radius: 12px;
+  border: 5px black solid;
+  margin: 25px 0px 10px 0;
+  text-align: center;
+  background-image: url('https://images.pexels.com/photos/912110/pexels-photo-912110.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
+  color: aliceblue;
+  text-align: center;
+}
+
+.vedette {
+  animation: flashouille 2s linear infinite;
+}
+
+@keyframes flashouille {
+  50% {
+    opacity: 0;
+    color: red;
+  }
+}
+
+.blinking {
+  font-size: 2px;
+  border: 3px solid yellow;
+  animation-name: blinking;
+  animation-duration: 1s;
+  animation-iteration-count: 100;
+}
+@keyframes blinking {
+  50% {
+    border-color: black;
+  }
+}
+
+.mat-card-subtitle {
+  border-radius: 12px;
+  border: 1px black solid;
+  margin: 10px 0px 10px 0;
+  background-color: blue;
+  background-image: url('https://images.pexels.com/photos/912110/pexels-photo-912110.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
+  color: white;
+  text-align: center;
+}
+
+.prixtotal {
+  color: black;
+  border-radius: 0px;
+  text-align: center;
+  display: inline-block;
+  font-size: 49px;
+  border-radius: 10px;
+}
+
+.corner-ribbon {
+  width: 100px;
+  background: red;
+  color: #fff;
+  position: fixed;
+  text-align: center;
+  top: 0px;
+  font-size: 14px;
+  left: -40px;
+  line-height: 40px;
+  position: absolute;
+  border-radius: 10px;
+}
+
+.corner-ribbon.left {
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.prixreg {
+  text-decoration: line-through;
+  font-size: 15px;
+}

@@ -1,0 +1,54 @@
+.container {
+  text-align: center;
+}
+
+.example-card {
+  max-width: 235px;
+  border-radius: 12px;
+  border: 5px black solid;
+  background-image: url('https://wallpaperaccess.com/full/42554.jpg');
+  margin-bottom: 5px;
+}
+
+.mat-card-title {
+  font-size: 35px;
+  color: black;
+  text-align: center;
+}
+
+.mat-raised-button {
+  font-size: 15px;
+  color: black;
+  border: 2px solid black;
+  border-radius: 12px;
+}
+
+button:hover {
+  background-color: red;
+  border: 2px solid black;
+  font-weight: bold;
+}
+
+.mat-card-subtitle {
+  text-decoration: none;
+  display: block;
+  font-size: 15px;
+}
+
+img {
+  border-top: 3px solid black;
+  border-bottom: 3px solid black;
+}
+li {
+  list-style-type: none;
+}
+
+p {
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
+.bold {
+  font-weight: bold;
+  font-size: 17px;
+}

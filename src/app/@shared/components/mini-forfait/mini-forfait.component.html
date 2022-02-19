@@ -1,0 +1,20 @@
+<!-- Angular Flex colonne/commence de la gauche / 5px de gap entre chaque cards --->
+<div class="container" fxLayout fxLayoutAlign="flex-start" fxLayoutGap="5px">
+  <!-- Boucle  --->
+  <ng-container *ngFor="let mini of minis">
+    <!-- ngIF affiche seulement les mini avec vedette:true--->
+    <mat-card *ngIf="mini.vedette" class="exemple-card">
+      <div [ngClass]="'blinking corner-ribbon left'">RABAIS {{ mini.rabais }} $</div>
+      <mat-card-header>
+        <mat-card-subtitle>{{ mini.destination }} </mat-card-subtitle>
+        <mat-card-title>Départ: {{ mini.villeDeDepart }}</mat-card-title>
+      </mat-card-header>
+      <mat-divider></mat-divider>
+      <mat-card-content class="prixreg">Prix régulier {{ mini.prix }} $ </mat-card-content>
+      <!-- ajout du NGclass vedette separement de la class prixtotal pour les besoins de la cause , 
+         Une classe spécifique doit s’appliquer aux forfaits vedette afin de permettre à l’utilisateur de les distinguer facilement-->
+      <mat-card-content [ngClass]="'vedette'" class="prixtotal">{{ mini.prix - mini.rabais }}$</mat-card-content>
+      <mat-card-content><app-star></app-star> </mat-card-content>
+    </mat-card>
+  </ng-container>
+</div>
